@@ -1,0 +1,21 @@
+<div *ngIf="loading" class="status">Загрузка...</div>
+<div *ngIf="error" class="status error">{{ error }}</div>
+
+<div *ngIf="movie" class="movie-detail">
+  <button class="close-btn" (click)="goBack()">✕</button>
+
+  <img [src]="movie.poster" alt="{{ movie.title }}" class="poster-large" />
+
+  <div class="info">
+    <h1>{{ movie.title }}</h1>
+    <p class="year">{{ movie.year }}</p>
+
+    <div class="genres">
+      <span *ngFor="let g of movie.genres" class="tag">{{ g }}</span>
+    </div>
+
+    <p class="desc">{{ movie.description }}</p>
+
+    <div class="rating">{{ movie.rating }}</div>
+  </div>
+</div>

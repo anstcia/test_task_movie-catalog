@@ -1,0 +1,58 @@
+.movie-detail {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 24px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.poster-large {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #f2f2f2;
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.desc {
+  color: #444;
+  line-height: 1.4;
+}
+
+.rating {
+  font-weight: bold;
+  font-size: 20px;
+  background: #f9f9f9;
+  padding: 6px 14px;
+  border-radius: 10px;
+  align-self: flex-start;
+}

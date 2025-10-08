@@ -1,0 +1,26 @@
+<div class="movie-grid">
+  <div
+    class="movie-card"
+    *ngFor="let movie of filteredMovies()"
+    (click)="openModal(movie)"
+  >
+    <img [src]="movie.poster" [alt]="movie.title" />
+    <div class="movie-info">
+      <h3>{{ movie.title }}</h3>
+      <p>{{ movie.year }}</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-backdrop" *ngIf="selectedMovie" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeModal()">×</button>
+    <img [src]="selectedMovie.poster" [alt]="selectedMovie.title" />
+    <h2>{{ selectedMovie.title }}</h2>
+    <p><strong>Год:</strong> {{ selectedMovie.year }}</p>
+    <p><strong>Описание:</strong> {{ selectedMovie.description }}</p>
+  </div>
+</div>
+
+
